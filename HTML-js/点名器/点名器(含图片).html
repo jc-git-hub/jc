@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>随机点名器</title>
+        <style>
+            *{
+                margin:0px;
+                padding:0px;
+            }
+            #main{
+                margin:100px;
+                background:#abcdef;
+                width:800px;
+                padding:50px;
+                border-radius:10%;
+                box-shadow:0 2px 12px #666666;
+            }
+            #box{
+                background:#ff5511;
+                padding:20px;
+                font-size:55px;
+                font-weight:bold;
+                border-radius:15px 15px 15px 15px;
+                box-shadow:0 2px 12px #666666;
+            }
+            #img{
+                background:rgb(187, 189, 181);
+                height: 300px;
+                width: 250px;
+                margin:50px;
+                border-radius:15px 15px 15px 15px;
+
+            }
+            #bt{
+                width:100px;
+                font-size:20px;
+                font-weight:bold;
+                background-color:green;
+                border-radius:8px 8px 8px 8px;
+                box-shadow:0 2px 12px #666666;
+                cursor:pointer;
+                padding:5px;
+            }
+        </style>
+        <script>
+            var nameList = ['付其凡','宋慧娟','秦伟','戴纯','於佳东','刘伟','王志飞','张伟明','殷志祥','赵斌',
+                    '颜缘份','张光耀','吴亮','钱楚云','谢洋','周大来','汪宇星','李鑫','柳衡','杨桐','但唐宇','阮栋'];
+            var imgList = ['images/1.jpg','images/2.jpg','images/3.jpg','images/4.jpg','images/5.jpg',
+                    'images/6.jpg','images/7.jpg','images/8.png','images/9.jpg','images/10.jpg','images/11.jpg',
+                    'images/12.jpg','images/13.jpg','images/14.jpg','images/15.jpg','images/16.jpg','images/17.jpg',
+                    'images/18.jpg','images/19.jpg','images/20.jpg','images/21.jpg','images/22.jpg'];
+            var myTime = null;
+
+            function runit(){
+                var btn = document.getElementById('bt');
+                if(myTime==null){  //如果是null  说明你现在是停止的    
+                    //点击以后 让它动起来    按钮是红色 停止   
+                    show();
+                    bt.innerHTML = '停止';
+                    bt.style.backgroundColor='red';
+            
+                }else{
+                    //如果动起来 点击以后  停止  按钮是开始 背景是绿色 
+                    bt.innerHTML = '开始';
+                    bt.style.backgroundColor='green';
+                    clearTimeout(myTime);
+                    myTime = null;
+                }
+            }
+
+            function show(){
+                var names = document.getElementById('box');
+                var images = document.getElementById('img');
+
+                var number = Math.floor(Math.random()*1000)%nameList.length;
+                names.innerHTML = nameList[number]
+                images.src = imgList[number]
+                myTime = setTimeout(show,50); //为了防止越来越快
+            }
+        
+        </script>
+    </head>
+    <body>
+        <center>
+        <div id="main">
+            <div id="box">武汉Python随机点名器</div>
+            <div><img id='img' src="manba.jpg" alt=""></div>
+            <button id="bt" onclick="runit()">开 始</button>
+        </div>
+        </center>
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

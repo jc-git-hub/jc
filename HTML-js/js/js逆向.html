@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js逆向基础知识整理</title>
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+</head>
+<body>
+    <script>
+        // //函数
+        // (function auto(){
+        //     console.log('666')
+
+        // })()    //函数的自动执行
+
+        // $(function test(){
+        //     console.log('666');
+
+        // })  //jquery写法
+// 加密
+        var test = 'hello jc'
+        console.log(btoa(test))
+// 解密
+        var res = 'aGVsbG8gd29ybGQ='
+        console.log(atob(res))   
+
+    let value = 'jiamifangfa ';
+    let trans = Crypto.ens.Utf8.parse(value)
+    let encryped =CryptoJS.enc.Base64.string
+    </script>
+    
+</body>
+</html>

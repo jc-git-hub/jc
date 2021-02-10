@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        1.表单是用来手机用户的信息  提交给服务器
+        2. 关键词是form
+        3. action提交的地址  服务器的地址
+        4. method get post 提交方式 method get在浏览器地址栏提交 速度快
+        post在表单中提交 安全性高  速度稍慢
+        5. enctype="multipart/from-data" 只要你想上传头像文件 这个必须加
+
+        有 input框
+            type
+                text  普通文本
+                password 
+        select  下拉框
+        textarea 多行
+        label 标签
+
+
+
+
+    -->
+<form action="#" method="get" enctype="multipart/form-data">
+    <p> 
+    <label for="username">用户名</label>   
+    <input type="text" name="t1">
+    <label for="username">密码</label>
+    <input type="password" name="psd1">
+    <input type="tel" name="tel1">
+</p>
+<a>
+        <input value="1" type="checkbox" name="b1">
+    <input  type="checkbox" name="b2">
+    <input  type="checkbox" name="b3">
+    <input  type="checkbox" name="b4">
+</a><br>
+    <input  type="radio" name="r1">
+    <input  type="radio" name="r1">
+    <input  type="radio" name="r1">
+<br>
+    <input type="file" name="files">
+<br>
+    <input type="button" value="点我" name="but">
+<br>
+<input type="submit" value="提交"><br>
+<select name="address" id="address">
+    <option value="0">请选择</option>
+    <option value="1">北京</option>
+    <option value="2">上海</option>
+    <option value="3">南京</option>
+    <option value="4">武汉</option>
+    <option value="5">成都</option>
+</select>
+<textarea name="text" id="contens" cols="30" rows="10"></textarea>
+
+    
+</body>
+</html>

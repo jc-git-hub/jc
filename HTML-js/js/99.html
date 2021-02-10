@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+document.write("<table border>")
+for( var i=9;i>=1;i--){
+    for(var a=1;a<=i;a++){
+        document.write(a+'*'+ i +'='+ a*i+'  ')
+    }
+    document.write('<br/>')
+}
+
+for( var i=1;i<=9;i++){
+    for(var a=1;a<=i;a++){
+        document.write(a+'*'+ i +'='+ a*i+'  ')
+    }
+    document.write('<br/>')
+}
+// var heros =['嬴政','赢稷','赢驷','嬴师隰','孝公']
+// heros.push('商鞅')//插入最后一个
+// heros.unshift('孝公')//插入第一个
+// console.log(heros)
+// Pop
+// shift
+// function compare(num1, num2){
+//     if (num1>num2){
+//         return 1
+//     }
+//     else{
+//         return -1
+//     }
+
+// }
+
+// console.log(compare(10,22))
+// var nums=[1,4,2,6,7,3,9,8,7,342,42,321,12,12]
+// var nums1=[1,7,5,4,2,9,7,2]
+// console.log(nums.sort(compare))
+// console.log(nums1.sort())
+
+var person={
+    'name':'大秦赋',
+    'age':18,
+    'eat':function(){
+        return 1;
+    }
+}
+console.log(person.name)
+console.log(person.eat())
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

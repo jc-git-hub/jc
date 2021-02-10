@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js逆向基础</title>
+    <script crossorigin="anonymous" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" src="https://lib.baomitu.com/jquery/3.5.1/jquery.js"></script>
+</head>
+
+    <script>
+        // var test ={
+        //     'username':'zhangsan',
+        //     'password':'123456'
+        // }
+        // console.log(JSON.stringify(test))
+        // console.log(typeof(test))
+
+        // json_test = '{"username":"zhangsan","password":"123456"}'
+        // console.log(JSON.parse(json_test))
+        // console.log(typeof(JSON.parse(json_test)))
+
+        // 数组
+        //一般  验证码等逆向过程 结果一般都写到数组中
+        // let res = new Array();
+        // let res1 = []     
+        // res1.push(1,2,3,4)
+        // res.push([1,2,3,4])
+        // res.pop()
+        // console.log(res)
+        // console.log(res1)
+        // res1.push([2,3,4,5,5,6])
+        // console.log(res1)
+        // console.log(res1.join("-"))  //对数组的元素拼接  转化成字符串
+        // console.log(res1.toString())   //直接转化成字符串
+
+
+
+
+        // 字符和unicode相互转化
+        // let value = 'ello'
+        // console.log(value.charCodeAt())  //转成unicode 
+        // let res = String.fromCharCode(104,103,102,101,100)   //转成字符串
+        // console.log(res)
+
+
+
+        //toString
+        let param = [1,2,3,4]
+        console.log(param.toString())
+
+        let nums = 900
+        console.log(nums.toString(2))    //转二进制
+        console.log(nums.toString(8))    //转八进制
+        console.log(nums.toString(16))  //转16进制
+
+        let s1 = 56789
+        console.log(s1.toString(),typeof(s1))     //判断类型
+        let nums1 = [12,3123,23123,3,12,3,1]
+        console.log(toString.call(nums1))    //object Array  
+
+        window.onload = function(){
+            //当这个页面的标签全部加载完毕在执行这里边的代码  
+            var res = document.getElementsByName('username')[0];
+            document.getElementsByTagName('button')[0].onclick = function(){
+                res.value = 'qfpython'
+            }
+        }
+
+
+
+
+        // function first(){
+        //     console.log('调用我 我很骚气')
+        //     return "first";
+        // }
+
+        // function second(){
+        //     console.log('调用我 我很傲气')
+        //     return "second";
+        // }
+
+        // function _tokenvalue(v){
+        //     let _token = v.join('-')
+        //     return first(),
+        //             _token,
+        //            second();
+        // }
+        // console.log(_tokenvalue([1,2,3,4,5]))
+
+
+            function SendXHR(){
+                //第一步 创建一个对象
+                var xhr = new XMLHttpRequest();
+                // 第二步 设置发送的方法   以及指定链接 
+                xhr.open('GET','http://www.qfedu.com/whpython/2003')
+                // 第三步 发送数据
+                xhr.send()
+                // 第四步 等待服务器的返回
+                xhr.onreadystatechange = function(){
+                    // 0 请求没有初始化
+                    // 1 链接已经链接
+                    // 2 请求已经接收
+                    // 3 请求处理中
+                    // 4 请求完成响应就绪
+                    if(xhr.readyState == 4){
+                        //当状态为4才能给浏览器数据
+                        return xhr.responseText
+                        // 这些就是返回给服务器的数据
+                    }
+                }
+            }
+            // jQuery ajax
+            loginUrl = ''
+            $.ajax({
+                type:"POST", //请求类型
+                url:loginUrl+'?dasddsa'+'&'+location.search.substring(1)+'&text='+Math.random(), //构建一个类似大家搜索百度时候的url地址
+                contentType:'text/plain; charset=UTF-8',//跟服务器做好约定 相互之间支持的类型 
+             success: function(msg){  //请求成功  以后做的事情  msg 是服务器返回给浏览器的数据 
+                alert( "Data Saved: " + msg );
+            },
+            error:function(){
+                //失败以后做的事情
+            }
+        })
+            //钩子
+        let persons = {
+            'username':'kangbazi',
+            'age':25
+        }
+
+        let person = {
+            fullinfo:function(city,country){
+                return this.username+'&'+this.age+'&'+city+'&'+country;
+            }
+        }
+
+        console.log(person.fullinfo.call(persons,'武汉','中国'))
+
+
+
+</script>
+<body>
+<div id="test">
+    <p><label for="username">用户名:</label><input type="text" name="username" value="hello world"></p>
+
+    <button>点我改变输入框中的值</button>
+</div>
+</body>
+</html>

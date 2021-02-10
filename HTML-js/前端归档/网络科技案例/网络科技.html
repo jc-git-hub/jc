@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<script src="fonts/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="fonts/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">                                  
+			*{
+				font-family: "微软雅黑";
+			}
+			/*.navbar{
+				border-top: 3px solid #2574A9;
+				background: white;
+			}*/
+			.navbar .container .collapse .nav li a span{
+				font-size: 10px;
+			}
+			.navbar-default .navbar-nav > .active > a {
+				background: red;
+				color: white;
+			}
+			.navbar-default .navbar-nav > .active > a:hover{
+				background: green;
+			
+			}
+			.carousel{
+				margin-top: 50px;
+				overflow: hidden;
+			}
+			.carousel .carousel-inner img{
+				width: 100%;
+			}
+			.carousel .carousel-inner .carousel-caption{
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+			.carousel .carousel-inner .carousel-caption h1{
+				font-weight: bold;
+			}
+			.carousel .carousel-inner .carousel-caption p{
+				font-size: 1.5rem;
+			}
+			.carousel .carousel-inner .carousel-caption .btn{
+				background: transparent;
+				color: white;
+				width: 100px;
+				align-self: center;
+			}
+			.container>h1{
+				text-align: center;
+				height: 100px;
+				line-height: 140px;
+			}
+			.container>p{
+				text-align: center;
+				height: 100px;
+				line-height: 10px;
+			}
+			article .container .thumbnail{
+				border: none;
+			}
+			article .container .row .round{
+				border: 1px solid darkgray;
+				border-radius: 50px;
+				width: 100px;
+				height: 100px;
+				text-align: center;
+				line-height: 100px;
+				font-size: 40px;
+				color: #2574A9;
+				margin: 0 auto;
+				transition: all 0.5s;
+			}
+			article .container .row .round:hover{
+				background: #2574A9;
+				color: white;
+				transform: translateY(-5px);
+			}
+			article .container .row figcaption{
+				text-align: center;
+			}
+			section{
+				background: whitesmoke;
+				padding-bottom: 50px;
+			}
+			article{
+				padding-bottom: 50px;
+			}
+			.container .img img{
+				width: 100%;
+			}
+			section .container figure .thumbnail{
+				padding: 0;
+				border: none;
+			}
+			section .container figure{
+				overflow: hidden;
+			}
+			section .container figure:before{
+				content: "";
+				display: block;
+				width: 90%;
+				height: 0%;
+				background: #2574A9;
+				position: absolute;
+				top: 0;
+				opacity: 0.5;
+				transition: all 0.2s;
+			}
+			section .container figcaption{
+				position: relative;
+				width: 100%;
+				height: 40px;
+			}
+			section .container figcaption h4{
+				color: #2574A9;
+				font-weight: bold;
+				text-align: center;
+				position: absolute;
+				width: 100%;
+				height: 30px;
+				transition: all 0.2s;
+			}
+			section .container figcaption:before{
+				content: "";
+				display: block;
+				background: #2574A9;
+				height: 10%;
+				width: 100%;
+				position: absolute;
+				top: 0px;
+				opacity: 1;
+				transition: all 0.2s;
+			}
+			section .container figure>p{
+				position: absolute;
+				width: 90%;
+				height: 100%;
+				padding: 40% 10%;
+				color: white;
+				top: -100%;
+				transition: all 0.2s;
+			}
+			section .container figure:hover:before{
+				height: 82%;
+			}
+			section .container figure:hover :before{
+				height: 100%;
+			}
+			section .container figure:hover h4{
+				color: white;
+			}
+			section .container figure:hover p{
+				top: 0;
+			}
+			.row .container .thumbnail{
+				position: relative;
+				overflow: hidden;
+			}
+			.row .container .thumbnail:before{
+				content: "";
+				display: block;
+				width: 100%;
+				height: 0%;
+				background: #2574A9;
+				position: absolute;
+				opacity: 0.5;
+				transition: all 0.1s;
+			}
+			.row .container .thumbnail:hover:before{
+				height: 100%;
+			}
+			.ourvedio .container .thumbnail{
+				background: transparent;
+				border: none;
+			}
+			.ourvedio .container .ourvidiohead{
+				border-bottom: 1px solid lightgray;
+				width: 100%;
+				margin-bottom: 20px;
+				padding: 0;
+				margin: 20px 0;
+			}
+			.ourvedio .container .ourvidiohead h1{
+				border-bottom: 1px solid darkgray;
+				width: 30%;
+				height: 50px;
+				margin: 0;
+			}
+			.ourkeren{
+				position: relative;
+				margin-bottom: 80px;
+			}
+			.ourkeren .btn-group{
+				position: absolute;
+				z-index: 10;
+				right: 5%;
+				top: 11%;
+			}
+			.ourkeren .btn-group .btn{
+				border: none;
+				color: gray;
+			}
+			.ourkeren .container .keren .thumbnail{
+				background: whitesmoke;
+			}
+			.ourkeren .container .keren .thumbnail{
+				position: relative;
+				top: 100px;
+				width: 250px;
+				height: 250px;
+			}
+			.ourkeren .container .keren .kerenimg{
+				width: 150px;
+				border-radius: 100px;
+				overflow: hidden;
+				height: 150px;
+				text-align: center;
+				border: 5px solid #2574A9;
+				position: absolute;
+				top: -80px;
+				left: 50px;
+				z-index: 30;
+			}
+			.ourkeren .container .kerentxt{
+				text-align: center;
+				height: 100%;
+				padding: 30% 0;
+				position: absolute;
+				transition: all 1s;
+				z-index:20;
+			}
+			.ourkeren .container .kerentxt:before{
+				content: "";
+				display: block;
+				width: 100%;
+				height: 0%;
+				background: #2574A9;
+				position: absolute;
+				top: 0%;
+				transition: all 1s;
+				z-index: -10;
+			}
+			.ourkeren .container .kerentxt h4{
+				font-weight: bold;
+				color: #2574A9;
+				transition: all 1s;
+			}
+			.ourkeren .container .keren:hover :before{
+				height: 100%;
+			}
+			.ourkeren .container .keren:hover .kerentxt,.ourkeren .container .keren:hover .kerentxt h4{
+				color: white;
+			}
+			footer{
+				width: 100%;
+				background: #2574A9;
+				height: 100px;
+			}
+			footer .container>p{
+				text-align: center;
+				color: white;
+				line-height: 80px;
+				height: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="collapsed navbar-toggle" data-toggle="collapse" data-target="#coll">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand">
+						<img src="img/img/1468986284.png" />
+					</a>
+				</div>
+				<div class="collapse navbar-collapse" id="coll">
+					<ul class="nav navbar-nav navbar-right hidden-sm">
+						<li class="active"><a href="#">网站首页</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								关于我们<span class="glyphicon glyphicon-menu-down"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">1</a></li>
+								<li><a href="#">1</a></li>
+								<li><a href="#">1</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								新闻资讯<span class="glyphicon glyphicon-menu-down"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">1</a></li>
+								<li><a href="#">1</a></li>
+								<li><a href="#">1</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								产品展示<span class="glyphicon glyphicon-menu-down"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">1</a></li>
+								<li><a href="#">1</a></li>
+								<li><a href="#">1</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								下载中心<span class="glyphicon glyphicon-menu-down"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">1</a></li>
+								<li><a href="#">1</a></li>
+								<li><a href="#">1</a></li>
+							</ul>
+						</li>
+						<li><a href="#">客户案例</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="carousel slide" id="lunbo">
+			<ol class="carousel-indicators">
+				<li class="active" data-target="#lunbo" data-slide-to="0" ></li>
+				<li data-target="#lunbo" data-slide-to="1" ></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="img/img/1488527073.jpg" />
+					<div class="carousel-caption">
+						<h1 class="text-left">先入为主，布局未来</h1>
+						<p class="text-left">响应式布局，智能识别多种终端设备</p>
+					</div>
+				</div>
+				<div class="item">
+					<img src="img/img/1488526977.jpg" />
+					<div class="carousel-caption">
+						<h1 class="text-center">7年专注，网站建设</h1>
+						<p class="text-center">专注于设计体验，专业于解决方案</p>
+						<button class="btn btn-default">MORE>></button>
+					</div>
+				</div>
+			</div>
+			<a class="carousel-control left" data-slide="prev" href="#lunbo">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="carousel-control right" data-slide="next" href="#lunbo">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		</div>
+		<article>
+			<div class="container">
+				<h1>专注网站建设七年</h1>
+				<p>我们做什么？</p>
+				<div class="row">
+					<figure class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+						<div class="thumbnail">
+							<div class="round">
+								<span class="glyphicon glyphicon-blackboard"></span>
+							</div>
+							<figcaption>
+								<h3>高速网站定制</h3>
+								<p>企业高端网站定制设计<br />能量品牌形象</p>
+							</figcaption>
+						</div>
+					</figure>
+					<figure class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+						<div class="thumbnail">
+							<div class="round">
+								<span class="glyphicon glyphicon-console"></span>
+							</div>
+							<figcaption>
+								<h3>系统软件研发</h3>
+								<p>“拒绝平庸 只出精品”<br />捕捉需求、分析设计</p>
+							</figcaption>
+						</div>
+					</figure>
+					<figure class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+						<div class="thumbnail">
+							<div class="round">
+								<span class="glyphicon glyphicon-user"></span>
+							</div>
+							<figcaption>
+								<h3>营销策划推广</h3>
+								<p>“专业团队 超前思维”全方位推广你的<br />品牌和产品</p>
+							</figcaption>
+						</div>
+					</figure>
+					<figure class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+						<div class="thumbnail">
+							<div class="round">
+								<span class="glyphicon glyphicon-refresh"></span>
+							</div>
+							<figcaption>
+								<h3>云服务器运维</h3>
+								<p>“快速响应，贴心服务”呵护你的企业<br />网站健康成长</p>
+							</figcaption>
+						</div>
+					</figure>
+				</div>
+			</div>
+		</article>
+		<section>
+			<div class="container">
+				<h1>成功案例</h1>
+				<p>国内最优秀的电商平台及相关系统服务商</p>
+				<figure class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+					<p>环游旅游公司提供出境旅游，国内旅游，周边旅游，自助旅游等服务</p>
+						<div class="thumbnail">
+							<div class="img">
+								<img src="img/img/thumb_002.jpg" />
+							</div>
+							<figcaption>
+								<h4>环游旅游公司</h4>
+							</figcaption>
+						</div>
+				</figure>
+				<figure class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+					<p>环游旅游公司提供出境旅游，国内旅游，周边旅游，自助旅游等服务</p>
+						<div class="thumbnail">
+							<div class="img">
+								<img src="img/img/thumb_016.jpg" />
+							</div>
+							<figcaption>
+								<h4>爱普生装饰</h4>
+							</figcaption>
+						</div>
+				</figure>
+				<figure class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+					<p>环游旅游公司提供出境旅游，国内旅游，周边旅游，自助旅游等服务</p>
+						<div class="thumbnail">
+							<div class="img">
+								<img src="img/img/thumb_006.jpg" />
+							</div>
+							<figcaption>
+								<h4>华阳建筑公司</h4>
+							</figcaption>
+						</div>
+				</figure>
+				<figure class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+					<p>环游旅游公司提供出境旅游，国内旅游，周边旅游，自助旅游等服务</p>
+						<div class="thumbnail">
+							<div class="img">
+								<img src="img/img/thumb_005.jpg" />
+							</div>
+							<figcaption>
+								<h4>固齿健医院</h4>
+							</figcaption>
+						</div>
+				</figure>
+			</div>
+		</section>
+		<article class="row">
+			<div class="container">
+				<h1>新闻动态</h1>
+				<p>即时发布我们最新的产品及服务动态</p>
+				<div class="img col-lg-4 col-md-4 col-sm-12 col-xs-12">
+					<div class="thumbnail">
+						<img src="img/img/thumb_004.jpg" />
+					</div>
+				</div>
+				<div class="img col-lg-4 col-md-4 col-sm-12 col-xs-12">
+					<div class="thumbnail">
+						<img src="img/img/thumb.jpg" />
+					</div>
+				</div>
+				<div class="img col-lg-4 col-md-4 col-sm-12 col-xs-12">
+					<div class="thumbnail">
+						<img src="img/img/thumb_019.jpg" />
+					</div>
+				</div>
+			</div>
+		</article>
+		<section class="ourvedio">
+			<div class="container">
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<div class="thumbnail">
+						<div class="ourvidiohead">
+							<h1>视频展示</h1>
+						</div>
+						<video width="100%" controls="controls">
+							<source src="radio/jljt.mp4" type="video/mp4"></source>
+							<source src="myvideo.ogv" type="video/ogg"></source>
+							<source src="myvideo.webm" type="video/webm"></source>
+							当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+						</video>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<div class="thumbnail">
+						<div class="ourvidiohead">
+							<h1>公司简介</h1>
+						</div>
+						<img src="img/img/1488527711135158.jpg"/>
+						<p>成立于2008年，坐落于广东省广州市是中国优秀的互联网服务提供商，自成立以来，专注于高端网站建设、系统软件研发。营销策划推广、服务器部署运维，为客户的互联网应用提供一站式服务。我们秉持着以最专业的态度替客户进行网站建置、网页设计、网页程式撰写以及网络营销服务，我们深信只有将这些环节都做到完美，才能替客户从网路上带来最大的效益，并降低制作成本。</p>
+						<button class="btn btn-link">更多详情>></button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<article class="ourkeren">
+			<div class="container">
+				<h1>我们的客人</h1>
+				<div class="btn-group">
+					<button class="btn btn-default"><span class="glyphicon glyphicon-menu-left"></span></button>
+					<button class="btn btn-default"><span class="glyphicon glyphicon-menu-right"></span></button>   
+				</div>
+				<div class="keren col-lg-3 col-md-3 col-sm-6 col-xs-6">
+					<div class="thumbnail">
+						<div class="kerenimg">
+							<img src="img/img/thumb_013.jpg" />
+						</div>
+						<div class="kerentxt">
+							<h4>CCTV</h4>
+							<p>找了很多家建站公司，后来听朋友说这家不错，效果的确是挺不错的</p>
+						</div>
+					</div>
+				</div>
+				<div class="keren col-lg-3 col-md-3 col-sm-6 col-xs-6">
+					<div class="thumbnail">
+						<div class="kerenimg">
+							<img src="img/img/thumb_009.jpg" />
+						</div>
+						<div class="kerentxt">
+							<h4>FEDEX</h4>
+							<p>我们的网站做得很好，因为是做的营销型网站，效果也很快就有了</p>
+						</div>
+					</div>
+				</div>
+				<div class="keren col-lg-3 col-md-3 col-sm-6 col-xs-6 hidden-sm hidden-xs">
+					<div class="thumbnail">
+						<div class="kerenimg">
+							<img src="img/img/thumb_014.jpg" />
+						</div>
+						<div class="kerentxt">
+							<h4>北赛电工</h4>
+							<p>符合我们开始提的要求，而且网站做的大气，不错！</p>
+						</div>
+					</div>
+				</div>
+				<div class="keren col-lg-3 col-md-3 col-sm-6 col-xs-6 hidden-sm hidden-xs">
+					<div class="thumbnail">
+						<div class="kerenimg">
+							<img src="img/img/thumb_012.jpg" />
+						</div>
+						<div class="kerentxt">
+							<h4>联通</h4>
+							<p>为我们公司制定了一套相当不错的建站方案，很好的解决了我们公司的难题，是值得合作的公司</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+		<footer>
+			<div class="container">
+				<p>网络科技有限公司</p>
+				
+			</div>
+		</footer>
+	</body>
+	<script type="text/javascript">
+		$(".carousel").carousel({
+			interval:3000
+		})
+	</script>
+</html>

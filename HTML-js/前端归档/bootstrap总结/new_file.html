@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>组件</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		
+	</head>
+	<body>
+		<!--Glyphicons 字体图标-->
+			<button class="glyphicon glyphicon-star  btn btn-lg"></button>
+			<button class="glyphicon glyphicon-star  btn btn-sm"></button>
+			<button class="glyphicon glyphicon-star  btn btn-xs"></button>
+		<!--下拉菜单-->
+		<div class="dropdown"><!-- dropup向上弹-->
+			<button class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown">下拉菜单<i class="caret"></i></button>
+			<ul class="dropdown-menu">
+				<li><a href="#">项目一</a></li>
+				<li><a href="#">项目二</a></li>
+				<li  class="divider"></li> <!--divider分隔线-->
+				<li><a href="#" class="disabled">项目三</a></li>     <!--disabled 禁用-->
+			</ul>
+		</div>
+		<!--按钮组  btn-group-lg 按钮尺寸：lg大 sm小 xs超小-->
+			<div class="btn-group btn-group-lg" role="group" aria-label="...">
+				  <button type="button" class="btn btn-default">Left</button>
+				  <button type="button" class="btn btn-default">Middle</button>
+				  <button type="button" class="btn btn-default">Right</button>
+			</div>
+		<!--导航
+			标签页 .nav-tabs -->
+				<ul class="nav nav-tabs">
+				  <li  class="active"><a href="#">Home</a></li>
+				  <li><a href="#">Profile</a></li>
+				  <li><a href="#">Messages</a></li>
+				</ul>
+			<!--胶囊式标签页-->
+				<ul class="nav nav-pills">
+				  <li role="presentation" class="active"><a href="#">Home</a></li>
+				  <li role="presentation"><a href="#">Profile</a></li>
+				  <li role="presentation"><a href="#">Messages</a></li>
+				</ul>
+			<!--导航条-->
+			 <!-- nav语意化导航标签 navbar导航条 navbar-default导航条的样式灰色    导航反色.navbar-inverse 黑色-->
+			<nav class="navbar navbar-default">
+				<!--确定导航的内容不是居中 而是充满100%-->
+  				<div class="container-fluid">
+  					<!--定义导航条的头部-->
+    					<div class="navbar-header">
+    						<!--折叠导航在缩小屏幕下出现的点击按钮 该按钮可收缩导航内容
+    						class="navbar-toggle collapsed"定义了导航条上下收缩的样式
+    						data-toggle="collapse"触发的事件collapse上下收缩
+    						data-target收缩的目标是哪一部分-->
+					      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+					        <span class="sr-only">Toggle navigation</span>
+					        <!--按钮图标中的线-->
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					      </button>
+					    <!--navbar-brand标牌，广告牌 ，logo  -->
+      					<a class="navbar-brand" href="#">Brand</a>
+    				</div>
+    				<!--class="collapse navbar-collapse"定义该div可进行收缩 id="navbar-collapse-1"与data-target="#navbar-collapse-1"相呼应-->
+		    		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+		    			<!--ul 实现导航条logo右侧-->
+			      <ul class="nav navbar-nav">
+			        <li class="active"><a href="#">Link </a></li>
+			        <li><a href="#">Link</a></li>
+			        <!--实现下拉菜单效果-->
+			        <li class="dropdown">
+			        					<!--实现下拉菜单样式        可以具有下拉菜单的功能                   样式小三角-->
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Dropdown <span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="#">Action</a></li>
+			            <li><a href="#">Another action</a></li>
+			            <li class="divider"></li>
+			            <li><a href="#">Separated link</a></li>
+			          </ul>
+			        </li>
+			      </ul>
+			    <!--form表单  导航条表单样式  将from表单内容居左 --> 
+		      <form class="navbar-form navbar-left" >
+		      
+		        <div class="form-group">
+		        						<!--具有宽100%             默认提示-->
+		          <input type="text" class="form-control" placeholder="Search">
+		        </div>
+		        <!--该按钮为提交按钮        样式是默认灰色-->
+		        <button type="submit" class="btn btn-default">Submit</button>
+		      </form>
+		      <!--ul的无序列表的内容居导航右侧-->
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#">Link</a></li>
+		        <!--下拉菜单-->
+		        <li class="dropdown">
+		        	
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Dropdown <span class="caret"></span></a>
+		          <ul class="dropdown-menu" role="menu">
+		            <li><a href="#">Action</a></li>
+		            <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li>
+		            <li class="divider"></li>
+		            <li><a href="#">Separated link</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+	<!--固定在顶部 （将导航固定在页面头部）	.navbar-fixed-top      固定底部 .navbar-fixed-bottom 
+		静止在顶部 .navbar-static-top
+	-->	
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container">
+		    ...
+		  </div>
+		</nav>
+	<!--路径导航-->
+		<ol class="breadcrumb">
+		  <li><a href="#">Home</a></li>
+		  <li><a href="#">Library</a></li>
+		  <li class="active">Data</li>
+		</ol>
+	<!--分页-->
+		<nav>
+		  <ul class="pagination">
+		    <li>
+		      <a href="#" />
+		        <span >&laquo;</span>
+		      </a>
+		    </li>
+		    <li><a href="#">1</a></li>
+		    <li><a href="#">2</a></li>
+		    <li><a href="#">3</a></li>
+		    <li><a href="#">4</a></li>
+		    <li><a href="#">5</a></li>
+		    <li>
+		      <a href="#" >
+		        <span >&raquo;</span>
+		      </a>
+		    </li>
+		  </ul>
+		</nav>
+		<!--巨幕   浏览器视口来展示网站上的关键内容-->
+		<div class="jumbotron">
+		  <h1>Hello, world!</h1>
+		  <p>...</p>
+		  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+		</div>
+		<!--缩略图-->
+		<div class="row">
+		  <div class="col-xs-6 col-md-3">
+		    <a href="#" class="thumbnail">
+		      <img src="..." alt="...">
+		    </a>
+		  </div>
+ 		<!--进度条-->
+ 		<div class="progress">
+		  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+		    <span class="sr-only">60% Complete</span>
+		  </div>
+		</div>
+		<!--媒体对象-->
+		<div class="media">
+		  <div class="media-left">
+		    <a href="#">
+		      <img class="media-object" width="60" src="img/thumb.jpg" alt="...">
+		    </a>
+		  </div>
+		  <div class="media-body">
+		    <h4 class="media-heading">Media heading</h4>
+		   图片介绍
+		  </div>
+		</div>
+		<!--列表组-->
+		<ul class="list-group">
+		  <li class="list-group-item">Cras justo odio</li>
+		  <li class="list-group-item">Dapibus ac facilisis in</li>
+		  <li class="list-group-item">Morbi leo risus</li>
+		  <li class="list-group-item">Porta ac consectetur ac</li>
+		  <li class="list-group-item">Vestibulum at eros</li>
+		</ul>
+		<!--面板-->
+			<div class="panel panel-default">
+			  <div class="panel-heading">Panel heading without title</div>
+			  <div class="panel-body">
+			    Panel content
+			  </div>
+			</div>
+			
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Panel title</h3>
+			  </div>
+			  <div class="panel-body">
+			    Panel content
+			  </div>
+			</div>
+		<!--带表格的面版-->
+		<div class="panel panel-default">
+		  <!-- Default panel contents -->
+		  <div class="panel-heading">Panel heading</div>
+		  <div class="panel-body">
+		    <p>...</p>
+		  </div>
+		
+		  <!-- Table -->
+		  <table class="table">
+		    ...
+		  </table>
+		</div>
+	</body>
+</html>

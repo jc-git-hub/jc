@@ -1,0 +1,195 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "微软雅黑";
+}
+body {
+  width: 1600px;
+  height: 1700px;
+}
+body header {
+  width: 1600px;
+  height: 105px;
+  float: left;
+}
+body header div {
+  width: 1004px;
+  background: #eaeef1;
+  height: 28px;
+  float: left;
+  padding: 0 298px;
+}
+body header div ul {
+  float: right;
+  padding: 8px 0;
+}
+body header div ul li {
+  list-style: none;
+  float: left;
+  padding: 0 6px;
+  height: 14px;
+  font-size: 14px;
+  line-height: 14px;
+  border-right: 1px solid #c2c2c4;
+}
+body header div ul li a {
+  color: #c2c2c4;
+  text-decoration: none;
+}
+body header div ul li a:hover {
+  color: #004481;
+}
+body header img {
+  margin-left: 298px;
+}
+body header form {
+  float: right;
+  margin-right: 298px;
+  margin-top: 20px;
+}
+body header form #txt {
+  height: 13px;
+  width: 224px;
+  float: left;
+  border: 1px solid #c2c2c4;
+  padding: 10px;
+}
+body nav {
+  width: 1004px;
+  height: 63px;
+  background: #004481;
+  color: #ffffff;
+  padding: 0 298px;
+  float: left;
+}
+body nav ul {
+  list-style: none;
+}
+body nav ul li {
+  float: left;
+  color: #a1b2c6;
+  font-size: 8px;
+  padding: 16px 14px;
+  text-align: center;
+}
+body nav ul li h3 {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: normal;
+}
+body nav ul li:hover {
+  color: #af9151;
+}
+body nav ul li:hover h3 {
+  color: #febf0f;
+}
+body #banner {
+  float: left;
+}
+body article {
+  width: 1002px;
+  height: 1050px;
+  margin-left: 298px;
+}
+body article #top {
+  height: 72px;
+}
+body article #top ul {
+  width: 560px;
+  margin: 0 auto;
+  height: 70px;
+}
+body article #top ul li {
+  list-style: none;
+  float: left;
+  padding: 14px 0px;
+  margin-right: 32px;
+  height: 24px;
+}
+body article #top ul li:hover {
+  color: #004481;
+  border-bottom: 3px solid #004481;
+  height: 21px;
+}
+body article section {
+  float: left;
+  margin-top: 40px;
+}
+body article section h4 {
+  font-weight: normal;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+body article section img {
+  float: left;
+  margin-right: 24px;
+  margin-bottom: 24px;
+}
+body article section p {
+  font-size: 12px;
+  line-height: 22px;
+  float: left;
+  color: #585858;
+}
+body footer {
+  height: 180px;
+  width: 1600px;
+  background: #19253d;
+  float: left;
+  margin-top: 34px;
+}
+body footer #last {
+  background: #495063;
+  width: 1002px;
+  height: 20px;
+  padding: 10px 298px;
+}
+body footer #last ul {
+  list-style: none;
+  width: 400px;
+  margin: 0 auto;
+}
+body footer #last ul li {
+  float: left;
+  color: #7a828d;
+  border-right: 1px solid #7a828d;
+  padding: 0 10px;
+  font-size: 12px;
+}
+body footer #last ul li:hover {
+  color: #ffffff;
+}
+body footer p {
+  width: 500px;
+  height: 50px;
+  padding: 45px 0;
+  margin-left: 298px;
+  color: #62666f;
+  font-size: 12px;
+  line-height: 28px;
+  float: left;
+}
+body footer p b {
+  font-size: 14px;
+}
+body footer p span {
+  color: #c3c3c3;
+  margin-left: 10px;
+}
+body footer p img {
+  margin-left: 10px;
+}
+body footer #right {
+  float: right;
+  width: 300px;
+  height: 50px;
+  padding: 45px 0;
+  color: #62666f;
+  margin-right: 298px;
+  font-size: 14px;
+}
+body footer #right #ewm {
+  float: right;
+  margin-top: -24px;
+}

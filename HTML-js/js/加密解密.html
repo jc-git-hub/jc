@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加密解密</title>
+    <script crossorigin="anonymous" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" src="https://lib.baomitu.com/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+</head>
+<!-- css3 ecmascript6 as6  html5-->
+<body>
+    <script>
+        // //base64编码
+        // var test1 = 'fsdfdfngfa'  //amlhbWkgZmFuZ2Zh
+        // console.log(btoa(test1))     //btoa/atob 16位 结尾可能是=
+        // //解密
+        // var res='amlhbWkgZmFuZ2Zh' //jiami fangfa
+        // console.log(atob(res))     
+        
+
+        // // 加密 
+        // let value='python is ';
+        // let trans=CryptoJS.enc.Utf8.parse(value) //对字符串utf8编码
+        // console.log(trans)
+        // let encryped =CryptoJS.enc.Base64.stringify(trans) //cHl0aG9uIGlzIA==
+        // console.log(encryped)
+        
+        // // //解密
+        // let trans_encryped = CryptoJS.enc.Base64.parse(encryped)
+        // let decryped = trans_encryped.toString(CryptoJS.enc.Utf8)
+        // console.log(decryped)
+        
+        value = 'md5jiami'
+        let encryped=CryptoJS.MD5(value);//e425e54e0268bfcc84d56d5d65854349   //32位
+        // console.log(encryped)
+        // let encryped = CryptoJS.SHA256(value);   //jfEB7DZvwqZup0TdA9QJzgP2ln0BXu026NvzLEEBIx0=//40+位
+        console.log(encryped)
+        console.log(encryped.toString())
+        // console.log(encryped.toString(CryptoJS.enc.Hex))
+        // console.log(encryped.toString(CryptoJS.enc.Base64))
+
+
+
+    </script>
+</body>
+</html>
